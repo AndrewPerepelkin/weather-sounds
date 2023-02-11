@@ -1,0 +1,28 @@
+{
+  "name": "weather-sounds",
+  "version": "1.0.0",
+  "description": "webpack 5 courese",
+  "private": true,
+  "scripts": {
+    "start": "npx webpack --mode development",
+    "build": "npx webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewPerepelkin/weather-sounds.git"
+  },
+  "keywords": [
+    "webpack",
+    "js"
+  ],
+  "author": "Andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewPerepelkin/weather-sounds/issues"
+  },
+  "homepage": "https://github.com/AndrewPerepelkin/weather-sounds#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
