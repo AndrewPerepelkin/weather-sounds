@@ -1,6 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 
 const DIST_DIRECTORY = 'dist'
 
@@ -12,16 +14,30 @@ module.exports = {
     path: path.resolve(__dirname, DIST_DIRECTORY),
     clean: true,
   },
-  plugins: [new HtmlWebpackPlugin({
+  plugins: [
+    new HtmlWebpackPlugin(
+        {
     template: path.resolve(__dirname, 'public/index.html')
-  }),
-    new CopyPlugin({
+        }
+      ),
+    new CopyPlugin(
+        {
       patterns: [
         {
           from: path.resolve(__dirname, 'public/favicon.png'),
           to: path.resolve(__dirname, DIST_DIRECTORY),
         },
     ]
-  })
+        }
+      ),
+    new MiniCssExtractPlugin(),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+    ],
+  },
 }
