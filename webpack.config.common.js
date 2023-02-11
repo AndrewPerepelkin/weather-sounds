@@ -27,6 +27,10 @@ module.exports = {
           from: path.resolve(__dirname, 'public/favicon.png'),
           to: path.resolve(__dirname, DIST_DIRECTORY),
         },
+        {
+          from: path.resolve(__dirname, 'public/assets'),
+          to: path.resolve(__dirname, DIST_DIRECTORY),
+        },
     ]
         }
       ),
