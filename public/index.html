@@ -21,31 +21,62 @@
     <h1 class="header">Weather sounds</h1>
     <div class="container">
       <div class="btn-container">
-        <button class="btn btn-sun">
+        <button
+          class="btn btn-sun"
+          data-sound="summer"
+          data-icon="sun"
+        >
           <img
             src="./assets/icons/sun.svg"
             alt="sun"
           />
         </button>
-        <button class="btn btn-rain">
+
+        <button
+          class="btn btn-rain"
+          data-sound="rain"
+          data-icon="cloud-rain"
+        >
           <img
             src="./assets/icons/cloud-rain.svg"
             alt="rain"
           />
         </button>
-        <button class="btn btn-snow">
+
+        <button
+          class="btn btn-snow"
+          data-sound="winter"
+          data-icon="cloud-snow"
+        >
           <img
             src="./assets/icons/cloud-snow.svg"
             alt="snow"
           />
         </button>
       </div>
+
       <input
         class="volume"
         type="range"
         name="volume"
         id="volume"
+        min="0"
+        max="100"
+        value="50"
       />
     </div>
+
+    <audio
+      id="summer"
+      src="./assets/sounds/summer.mp3"
+    ></audio>
+    <audio
+      id="rain"
+      src="./assets/sounds/rain.mp3"
+    ></audio>
+    <audio
+      id="winter"
+      src="./assets/sounds/winter.mp3"
+    ></audio>
   </body>
 </html>
